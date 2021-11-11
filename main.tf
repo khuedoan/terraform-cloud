@@ -19,3 +19,11 @@ resource "tfe_workspace" "freecloud" {
   queue_all_runs = false
   execution_mode = "local"
 }
+
+resource "tfe_workspace" "virtual_networks" {
+  name           = "virtual-networks"
+  description    = "https://github.com/khuedoan/virtual-networks"
+  organization   = data.tfe_organization.khuedoan.name
+  queue_all_runs = false
+  execution_mode = "local"
+}
