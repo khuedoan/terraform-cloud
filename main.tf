@@ -2,6 +2,10 @@ data "tfe_organization" "khuedoan" {
   name = "khuedoan"
 }
 
+resource "tfe_organization_token" "ci" {
+  organization = data.tfe_organization.khuedoan.name
+}
+
 resource "tfe_workspace" "domain" {
   name                          = "domain"
   description                   = "https://github.com/khuedoan/domain"
