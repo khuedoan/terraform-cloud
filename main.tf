@@ -25,5 +25,4 @@ resource "tfe_workspace" "virtual_networks" {
   description    = "https://github.com/khuedoan/virtual-networks"
   organization   = data.tfe_organization.khuedoan.name
   queue_all_runs = false
-  execution_mode = "local"
 }
