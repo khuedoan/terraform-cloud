@@ -9,6 +9,7 @@ resource "tfe_workspace" "domain" {
   file_triggers_enabled         = false
   queue_all_runs                = false
   structured_run_output_enabled = false
+  allow_destroy_plan            = false
 }
 
 resource "tfe_workspace" "freecloud" {
