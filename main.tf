@@ -28,9 +28,9 @@ resource "tfe_workspace" "virtual_networks" {
   queue_all_runs = false
 }
 
-resource "tfe_workspace" "vpn" {
-  name           = "vpn"
-  description    = "https://github.com/khuedoan/vpn"
+resource "tfe_workspace" "freevpn" {
+  name           = "freevpn"
+  description    = "https://github.com/khuedoan/freevpn"
   organization   = data.tfe_organization.khuedoan.name
   queue_all_runs = false
 }
