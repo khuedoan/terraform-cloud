@@ -34,3 +34,11 @@ resource "tfe_workspace" "freevpn" {
   organization   = data.tfe_organization.khuedoan.name
   queue_all_runs = false
 }
+
+resource "tfe_workspace" "homelab_external" {
+  name           = "homelab-external"
+  description    = "https://github.com/khuedoan/homelab"
+  organization   = data.tfe_organization.khuedoan.name
+  queue_all_runs = false
+  execution_mode = "local"
+}
