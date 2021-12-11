@@ -14,31 +14,35 @@ resource "tfe_workspace" "domain" {
 }
 
 resource "tfe_workspace" "freecloud" {
-  name           = "freecloud"
-  description    = "https://github.com/khuedoan/freecloud"
-  organization   = data.tfe_organization.khuedoan.name
-  queue_all_runs = false
-  execution_mode = "local"
+  name              = "freecloud"
+  description       = "https://github.com/khuedoan/freecloud"
+  organization      = data.tfe_organization.khuedoan.name
+  terraform_version = "~> 1.1.0"
+  queue_all_runs    = false
+  execution_mode    = "local"
 }
 
 resource "tfe_workspace" "virtual_networks" {
-  name           = "virtual-networks"
-  description    = "https://github.com/khuedoan/virtual-networks"
-  organization   = data.tfe_organization.khuedoan.name
-  queue_all_runs = false
+  name              = "virtual-networks"
+  description       = "https://github.com/khuedoan/virtual-networks"
+  organization      = data.tfe_organization.khuedoan.name
+  terraform_version = "~> 1.1.0"
+  queue_all_runs    = false
 }
 
 resource "tfe_workspace" "freevpn" {
-  name           = "freevpn"
-  description    = "https://github.com/khuedoan/freevpn"
-  organization   = data.tfe_organization.khuedoan.name
-  queue_all_runs = false
+  name              = "freevpn"
+  description       = "https://github.com/khuedoan/freevpn"
+  organization      = data.tfe_organization.khuedoan.name
+  terraform_version = "~> 1.1.0"
+  queue_all_runs    = false
 }
 
 resource "tfe_workspace" "homelab_external" {
-  name           = "homelab-external"
-  description    = "https://github.com/khuedoan/homelab"
-  organization   = data.tfe_organization.khuedoan.name
-  queue_all_runs = false
-  execution_mode = "local"
+  name              = "homelab-external"
+  description       = "https://github.com/khuedoan/homelab"
+  organization      = data.tfe_organization.khuedoan.name
+  queue_all_runs    = false
+  terraform_version = "~> 1.1.0"
+  execution_mode    = "local"
 }
