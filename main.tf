@@ -6,7 +6,7 @@ resource "tfe_workspace" "domain" {
   name                          = "domain"
   description                   = "https://github.com/khuedoan/domain"
   organization                  = data.tfe_organization.khuedoan.name
-  terraform_version             = "1.0.11"
+  terraform_version             = "~> 1.1.0"
   file_triggers_enabled         = false
   queue_all_runs                = false
   structured_run_output_enabled = false
