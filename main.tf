@@ -13,9 +13,9 @@ resource "tfe_workspace" "domain" {
   allow_destroy_plan            = false
 }
 
-resource "tfe_workspace" "freecloud" {
-  name              = "freecloud"
-  description       = "https://github.com/khuedoan/freecloud"
+resource "tfe_workspace" "horus" {
+  name              = "horus"
+  description       = "https://github.com/khuedoan/horus"
   organization      = data.tfe_organization.khuedoan.name
   terraform_version = "~> 1.1.0"
   queue_all_runs    = false
