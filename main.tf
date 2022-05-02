@@ -36,6 +36,7 @@ resource "tfe_workspace" "freevpn" {
   organization      = data.tfe_organization.khuedoan.name
   terraform_version = "~> 1.1.0"
   queue_all_runs    = false
+  execution_mode    = "local"
 }
 
 resource "tfe_workspace" "homelab_external" {
