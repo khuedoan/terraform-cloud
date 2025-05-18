@@ -14,8 +14,8 @@ resource "tfe_workspace" "domain" {
 }
 
 resource "tfe_workspace" "horus" {
-  name              = "horus"
-  description       = "https://github.com/khuedoan/horus"
+  name              = "cloudlab"
+  description       = "https://github.com/khuedoan/cloudlab"
   organization      = data.tfe_organization.khuedoan.name
   terraform_version = "~> 1.5"
   queue_all_runs    = false
