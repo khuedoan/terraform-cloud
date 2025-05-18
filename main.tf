@@ -22,11 +22,6 @@ resource "tfe_workspace" "cloudlab" {
   execution_mode    = "local"
 }
 
-moved {
-  from = tfe_workspace.horus
-  to   = tfe_workspace.cloudlab
-}
-
 resource "tfe_workspace" "virtual_networks" {
   name              = "virtual-networks"
   description       = "https://github.com/khuedoan/virtual-networks"
