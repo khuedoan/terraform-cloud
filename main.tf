@@ -13,13 +13,18 @@ resource "tfe_workspace" "domain" {
   allow_destroy_plan            = false
 }
 
-resource "tfe_workspace" "horus" {
+resource "tfe_workspace" "cloudlab" {
   name              = "cloudlab"
   description       = "https://github.com/khuedoan/cloudlab"
   organization      = data.tfe_organization.khuedoan.name
   terraform_version = "~> 1.5"
   queue_all_runs    = false
   execution_mode    = "local"
+}
+
+moved {
+  from = tfe_workspace.horus
+  to   = tfe_workspace.cloudlab
 }
 
 resource "tfe_workspace" "virtual_networks" {
